@@ -1,0 +1,127 @@
+@use '_colors.scss' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Hanken Grotesk', sans-serif;
+	height: 100vh;
+	font-size: 1.6rem;
+}
+
+.summary {
+	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient($slate-blue, $royal-blue);
+		padding: 1rem 8rem 2rem;
+		border-radius: 0 0 25px 25px;
+		&-heading {
+			color: $light-lavender;
+		}
+		&-text {
+			font-size: 1.2rem;
+			text-align: center;
+			color: $light-lavender;
+			&--white {
+				margin-bottom: 0.5rem;
+				font-size: 1.7rem;
+				font-weight: 500;
+				color: $white;
+			}
+		}
+		&-number {
+			font-size: 4.8rem;
+			font-weight: 700;
+			color: $white;
+		}
+		&-circle {
+			margin: 1rem 0;
+			padding: 1rem 2rem;
+			border-radius: 50%;
+			background-image: linear-gradient($violet, $persian-blue, $persian-blue);
+			text-align: center;
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0 2rem;
+
+		&-wrapper {
+			width: 100%;
+			margin-bottom: 0.5rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1.2rem 1rem;
+			font-size: 1.2rem;
+			border-radius: 8px;
+			&--red {
+				color: $red;
+				background-color: hsla(0, 100%, 67%, 0.05);
+			}
+			&--orange {
+				color: $orange;
+				background-color: hsla(39, 100%, 56%, 0.05);
+			}
+			&--green {
+				color: $green;
+				background-color: hsla(166, 100%, 37%, 0.05);
+			}
+			&--blue {
+				color: $blue;
+				background-color: hsla(234, 85%, 45%, 0.05);
+			}
+		}
+		&-heading {
+			align-self: flex-start;
+			font-size: 1.4rem;
+			color: $dark-gray;
+			padding: 1rem 0;
+			font-weight: 700;
+		}
+		&-text {
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+			&--blue {
+				color: $dark-gray;
+				font-weight: 700;
+			}
+			&--gray {
+				color: $gray;
+			}
+		}
+		&-icon {
+			width: 20%;
+			margin-right: 0.7rem;
+		}
+		&-button {
+			margin-top: 0.8rem;
+			width: 100%;
+			padding: 1.4rem 2.4rem;
+			text-align: center;
+			color: $white;
+			border: none;
+			border-radius: 20px;
+			background-color: $dark-gray;
+		}
+	}
+}
+
+@import './dekstopView';
